@@ -1,7 +1,7 @@
 <template>
     <div class="Select">
         <Select v-model="select1" clearable style="width: 200px;">
-            <Option v-for="item in citylist" :value="item.value">{{item.label}}</Option>
+            <Option v-for="item in citylist" :value="item.value" :key="item.value">{{item.label}}</Option>
         </Select>
         <p style="margin: 15px 0;">通过设置属性clearable可以清空已选项，仅适用于单选模式。</p>
         <p style="margin: 15px 0;">选中的是：{{select1}}</p>

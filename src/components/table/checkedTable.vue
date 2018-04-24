@@ -16,7 +16,7 @@
             title="修改"
             ok-text="确定"
             cancel-text="取消"
-            v-on:on-ok="editOk(editData)">
+            v-on:on-ok="editOk()">
                 <Form :label-width="50">
                     <Form-item v-for="(value, key) in editData" :label="convertKey(key)" :key="editData.id">
                         <Input v-model="editData[key]" :placeholder="'Please enter' + key"></Input>
@@ -38,6 +38,7 @@
 </template>
 <script>
     import Vue from 'vue'
+    import axios from 'axios'
     export default {
         data(){
             return{
@@ -191,6 +192,11 @@
                 dataSearch:[]
             }
         },
+//        created(){
+//            axios.get("src/components/table/tableData.json").then(res=>{
+//                console.log(res);
+//            })
+//        },
         computed:{
             columnsKey:function(){
                 let col=[];
@@ -249,11 +255,12 @@
                 })
                 return returnValue
             },
-            editOk(okData){
-                console.log(okData);
+            editOk(){
+                console.log(this.editData);
                 console.log(this.editIndex);
-                Vue.set(this.data1,this.editIndex,okData)
-                //this.$Message.success("修改成功！")
+                console.log(this.data1);
+                Vue.set(this.data1,this.editIndex,this.editData)
+                //this.data1.splice(this.editIndex,1,this.editData)
             },
             edit(data,index){ // 修改信息
                 console.log(data,index);

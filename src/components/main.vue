@@ -97,7 +97,7 @@
 <template>
     <div class="layout">
         <Sider ref="side1" :style="{position: 'fixed', height: '100vh', left: 0, width: isCollapsed?'60px':'200px', overflow: isCollapsed ? 'visible' : 'auto'}" hide-trigger collapsible  v-model="isCollapsed">
-            <Menu active-name="Input" theme="dark" width="auto" :open-names="['form']" :class="menuitemClasses">
+            <Menu active-name="checkedTable" theme="dark" width="auto" :open-names="['table']" :class="menuitemClasses">
                 <Submenu name="form">
                     <template slot="title">
                         <Icon type="star"></Icon>
@@ -123,6 +123,21 @@
                             DatePicker 日期
                         </router-link>
                     </MenuItem>
+                    <MenuItem name="Cascader">
+                        <router-link to="/Cascader">
+                            Cascader
+                        </router-link>
+                    </MenuItem>
+                    <MenuItem name="InputNumber">
+                        <router-link to="/InputNumber">
+                            InputNumber
+                        </router-link>
+                    </MenuItem>
+                    <MenuItem name="FormSubmit">
+                        <router-link to="/FormSubmit">
+                            FormSubmit
+                        </router-link>
+                    </MenuItem>
                 </Submenu>
                 <Submenu name="table">
                     <template slot="title">
@@ -137,6 +152,16 @@
                     <MenuItem name="sortTable">
                         <router-link to="/sortTable">
                             table 排序
+                        </router-link>
+                    </MenuItem>
+                    <MenuItem name="editTable">
+                        <router-link to="/editTable">
+                            table edit
+                        </router-link>
+                    </MenuItem>
+                    <MenuItem name="dragTable">
+                        <router-link to="/dragTable">
+                            dragTable
                         </router-link>
                     </MenuItem>
                     <MenuItem name="checkedTable">

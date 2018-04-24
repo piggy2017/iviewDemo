@@ -9,10 +9,15 @@ import Icon from '@/components/Icon'
 import Input from '@/components/form/Input'
 import Radio from '@/components/form/Radio'
 import Select from '@/components/form/Select'
+import Cascader from '@/components/form/Cascader'
+import FormSubmit from '@/components/form/FormSubmit'
+import InputNumber from '@/components/form/InputNumber'
 import DatePicker from '@/components/form/DatePicker'
 import tableBasic from '@/components/table/Table'
 import checkedTable from '@/components/table/checkedTable'
 import sortTable from '@/components/table/sortTable'
+import editTable from '@/components/table/editTable'
+import dragTable from '@/components/table/dragTable'
 Vue.use(Router)
 
 export default new Router({
@@ -46,6 +51,21 @@ export default new Router({
                 component: Radio
             },
             {
+                path: '/Cascader',
+                name: 'Cascader',
+                component: Cascader
+            },
+            {
+                path: '/FormSubmit',
+                name: 'FormSubmit',
+                component: FormSubmit
+            },
+            {
+                path: '/InputNumber',
+                name: 'InputNumber',
+                component: InputNumber
+            },
+            {
                 path: '/Select',
                 name: 'Select',
                 component: Select
@@ -64,6 +84,16 @@ export default new Router({
                 path: '/sortTable',
                 name: 'sortTable',
                 component: sortTable
+            },
+            {
+                path: '/editTable',
+                name: 'editTable',
+                component: editTable
+            },
+            {
+                path: '/dragTable',
+                name: 'dragTable',
+                component: dragTable
             },
             {
                 path: '/tableBasic',
