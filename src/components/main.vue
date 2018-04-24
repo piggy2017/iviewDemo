@@ -1,16 +1,3 @@
-<!--<template>-->
-    <!--<div class="">-->
-        <!--主界面-->
-    <!--</div>-->
-<!--</template>-->
-<!--<script>-->
-    <!--export default {}-->
-<!--</script>-->
-<!--<style>-->
-
-<!--</style>-->
-
-
 
 <style scoped>
     .layout{
@@ -96,8 +83,8 @@
 </style>
 <template>
     <div class="layout">
-        <Sider ref="side1" :style="{position: 'fixed', height: '100vh', left: 0, width: isCollapsed?'60px':'200px', overflow: isCollapsed ? 'visible' : 'auto'}" hide-trigger collapsible  v-model="isCollapsed">
-            <Menu active-name="checkedTable" theme="dark" width="auto" :open-names="['table']" :class="menuitemClasses">
+        <Sider ref="side1" :style="{position: 'fixed', height: '100vh', left: 0, width: isCollapsed?'0':'200px', overflow: isCollapsed ? 'visible' : 'auto'}" hide-trigger collapsible  v-model="isCollapsed">
+            <Menu v-bind:active-name="nav" theme="dark" width="auto" :open-names="['form']" :class="menuitemClasses" @on-select="chooseItem" @on-open-change="opend">
                 <Submenu name="form">
                     <template slot="title">
                         <Icon type="star"></Icon>
@@ -190,7 +177,7 @@
                 </Menu-item>
             </Menu>
         </Sider>
-        <Layout :style="{marginLeft:isCollapsed?'60px':'200px',position:'relative',height:'100%'}">
+        <Layout :style="{marginLeft:isCollapsed?'0':'200px',position:'relative',height:'100%'}">
             <Header :style="{background: '#fff', boxShadow: '0 2px 3px 2px rgba(0,0,0,.1)'}">
                 <Icon @click.native="collapsedSider" :class="rotateIcon" :style="{margin: '20px 20px 0',cursor: 'pointer'}" type="navicon-round" size="24"></Icon>
             </Header>
@@ -198,7 +185,7 @@
                 <Breadcrumb :style="{margin: '16px 0'}">
                     <BreadcrumbItem>Home</BreadcrumbItem>
                     <BreadcrumbItem>Components</BreadcrumbItem>
-                    <BreadcrumbItem>Layout</BreadcrumbItem>
+                    <BreadcrumbItem>{{nav}}</BreadcrumbItem>
                 </Breadcrumb>
                 <!--<Card>-->
                     <!--<div style="height: 600px">Content</div>-->
@@ -214,7 +201,8 @@
     export default {
         data (){
             return{
-                isCollapsed:false
+                isCollapsed:false,
+                nav:"Input"
             }
         },
         computed: {
@@ -234,6 +222,13 @@
         methods: {
             collapsedSider () {
                 this.$refs.side1.toggleCollapse();
+            },
+            chooseItem(name){
+                console.log(name);
+                this.nav=name
+            },
+            opend(list){
+                console.log(list)
             }
         }
     }
