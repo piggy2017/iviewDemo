@@ -1,29 +1,27 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import Login from '@/components/login/login'
-import main from '@/components/main'
-import Dashboard from '@/components/Dashboard'
-import Button from '@/components/Button'
-import Icon from '@/components/Icon'
-import Input from '@/components/form/Input'
-import Radio from '@/components/form/Radio'
-import Select from '@/components/form/Select'
-import Cascader from '@/components/form/Cascader'
-import FormSubmit from '@/components/form/FormSubmit'
-import InputNumber from '@/components/form/InputNumber'
-import DatePicker from '@/components/form/DatePicker'
-import tableBasic from '@/components/table/Table'
-import checkedTable from '@/components/table/checkedTable'
-import sortTable from '@/components/table/sortTable'
-import editTable from '@/components/table/editTable'
-import dragTable from '@/components/table/dragTable'
+const Login = r => require.ensure([], () => r(require('@/components/login/login')), 'Login')
+const main = r => require.ensure([], () => r(require('@/components/main')), 'main')
+const Button = r => require.ensure([], () => r(require('@/components/Button')), 'Button')
+const Icon = r => require.ensure([], () => r(require('@/components/Icon')), 'Icon')
+const Input = r => require.ensure([], () => r(require('@/components/form/Input')), 'Input')
+const Radio = r => require.ensure([], () => r(require('@/components/form/Radio')), 'Radio')
+const Select = r => require.ensure([], () => r(require('@/components/form/Select')), 'Select')
+const Cascader = r => require.ensure([], () => r(require('@/components/form/Cascader')), 'Cascader')
+const FormSubmit = r => require.ensure([], () => r(require('@/components/form/FormSubmit')), 'FormSubmit')
+const InputNumber = r => require.ensure([], () => r(require('@/components/form/InputNumber')), 'InputNumber')
+const DatePicker = r => require.ensure([], () => r(require('@/components/form/DatePicker')), 'DatePicker')
+const tableBasic = r => require.ensure([], () => r(require('@/components/table/Table')), 'tableBasic')
+const checkedTable = r => require.ensure([], () => r(require('@/components/table/checkedTable')), 'checkedTable')
+const sortTable = r => require.ensure([], () => r(require('@/components/table/sortTable')), 'sortTable')
+const editTable = r => require.ensure([], () => r(require('@/components/table/editTable')), 'editTable')
+const dragTable = r => require.ensure([], () => r(require('@/components/table/dragTable')), 'dragTable')
 Vue.use(Router)
-
 export default new Router({
   routes: [
     {path: '/', name: 'Login', component: Login},
-    {path:'/main', name:'main', component:main,
+    {path:'/main', name:'main', component:main,redirect: { name: 'Input' },
         children:[
             {
                 path: '/',
