@@ -27,76 +27,76 @@ export default new Router({
         children:[
             {
                 path: '/',
-                name: 'Dashboard',
-                component: Dashboard
-            },
-            {
-                path: '/Button',
-                name: 'Button',
-                component: Button
-            },
-            {
-                path: '/Icon',
-                name: 'Icon',
-                component: Icon
-            },
-            {
-                path: '/Input',
                 name: 'Input',
                 component: Input
             },
             {
-                path: '/Radio',
+                path: 'Input',
+                name: 'Input',
+                component: Input
+            },
+            {
+                path: 'Button',
+                name: 'Button',
+                component: Button
+            },
+            {
+                path: 'Icon',
+                name: 'Icon',
+                component: Icon
+            },
+            {
+                path: 'Radio',
                 name: 'Radio',
                 component: Radio
             },
             {
-                path: '/Cascader',
+                path: 'Cascader',
                 name: 'Cascader',
                 component: Cascader
             },
             {
-                path: '/FormSubmit',
+                path: 'FormSubmit',
                 name: 'FormSubmit',
                 component: FormSubmit
             },
             {
-                path: '/InputNumber',
+                path: 'InputNumber',
                 name: 'InputNumber',
                 component: InputNumber
             },
             {
-                path: '/Select',
+                path: 'Select',
                 name: 'Select',
                 component: Select
             },
             {
-                path: '/DatePicker',
+                path: 'DatePicker',
                 name: 'DatePicker',
                 component: DatePicker
             },
             {
-                path: '/checkedTable',
+                path: 'checkedTable',
                 name: 'checkedTable',
                 component: checkedTable
             },
             {
-                path: '/sortTable',
+                path: 'sortTable',
                 name: 'sortTable',
                 component: sortTable
             },
             {
-                path: '/editTable',
+                path: 'editTable',
                 name: 'editTable',
                 component: editTable
             },
             {
-                path: '/dragTable',
+                path: 'dragTable',
                 name: 'dragTable',
                 component: dragTable
             },
             {
-                path: '/tableBasic',
+                path: 'tableBasic',
                 name: 'tableBasic',
                 component: tableBasic
             }

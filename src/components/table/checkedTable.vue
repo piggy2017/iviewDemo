@@ -8,6 +8,7 @@
         <Button type="info" @click="addR()"><Icon size="14" type="plus"></Icon> 添 加</Button>
         <Button @click="handleSelectAll(true)">全 选</Button>
         <Button @click="handleSelectAll(false)">反 选</Button>
+
         <Input placeholder="Please enter ..." v-model="keyword" style="width: 200px"></Input>
         <Button type="ghost" @click="search"><Icon type="search"></Icon></Button>
         <p style="margin: 15px 0"></p>

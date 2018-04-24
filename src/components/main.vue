@@ -88,40 +88,40 @@
                 <Submenu name="form">
                     <template slot="title">
                         <Icon type="star"></Icon>
-                        <span>form 3</span>
+                        <span>form 表单</span>
                     </template>
                     <MenuItem name="Input">
-                        <router-link to="/Input">
+                        <router-link to="/main/Input">
                             input 输入框
                         </router-link>
                     </MenuItem>
                     <MenuItem name="Radio">
-                        <router-link to="/Radio">
+                        <router-link to="/main/Radio">
                             Radio 单选
                         </router-link>
                     </MenuItem>
                     <MenuItem name="Select">
-                        <router-link to="/Select">
+                        <router-link to="/main/Select">
                             Select 下拉
                         </router-link>
                     </MenuItem>
                     <MenuItem name="DatePicker">
-                        <router-link to="/DatePicker">
+                        <router-link to="/main/DatePicker">
                             DatePicker 日期
                         </router-link>
                     </MenuItem>
                     <MenuItem name="Cascader">
-                        <router-link to="/Cascader">
+                        <router-link to="/main/Cascader">
                             Cascader
                         </router-link>
                     </MenuItem>
                     <MenuItem name="InputNumber">
-                        <router-link to="/InputNumber">
+                        <router-link to="/main/InputNumber">
                             InputNumber
                         </router-link>
                     </MenuItem>
                     <MenuItem name="FormSubmit">
-                        <router-link to="/FormSubmit">
+                        <router-link to="/main/FormSubmit">
                             FormSubmit
                         </router-link>
                     </MenuItem>
@@ -132,27 +132,27 @@
                         <span>table</span>
                     </template>
                     <MenuItem name="tableBasic">
-                        <router-link to="/tableBasic">
+                        <router-link to="/main/tableBasic">
                             table 基础
                         </router-link>
                     </MenuItem>
                     <MenuItem name="sortTable">
-                        <router-link to="/sortTable">
+                        <router-link to="/main/sortTable">
                             table 排序
                         </router-link>
                     </MenuItem>
                     <MenuItem name="editTable">
-                        <router-link to="/editTable">
+                        <router-link to="/main/editTable">
                             table edit
                         </router-link>
                     </MenuItem>
                     <MenuItem name="dragTable">
-                        <router-link to="/dragTable">
+                        <router-link to="/main/dragTable">
                             dragTable
                         </router-link>
                     </MenuItem>
                     <MenuItem name="checkedTable">
-                        <router-link to="/checkedTable">
+                        <router-link to="/main/checkedTable">
                             table 操作
                         </router-link>
                     </MenuItem>
@@ -160,7 +160,7 @@
                 <Menu-item name="4">
                     <router-link to="/">
                         <Icon type="dashboard"></Icon>
-                        Dashboard
+                        login
                     </router-link>
                 </Menu-item>
                 <Menu-item name="5">
