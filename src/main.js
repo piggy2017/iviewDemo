@@ -6,8 +6,10 @@ import router from './router'
 import iView from "iview"
 import iviewArea from 'iview-area'
 import 'iview/dist/styles/iview.css'
+import axios from 'axios';
 Vue.use(iView);
 Vue.use(iviewArea)
+Vue.use(axios)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

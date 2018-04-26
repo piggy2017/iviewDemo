@@ -231,7 +231,7 @@
                             for(let j=0;j<this.selected.length;j++){
                                 if(this.data1[i].name===this.selected[j].name){
                                     this.data1.splice(i,1);
-                                    //this.$Message.success('删除成功!');
+                                    this.$Message.success('删除成功!');
                                 }
                             }
                         }

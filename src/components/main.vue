@@ -159,14 +159,26 @@
                 </Submenu>
                 <Menu-item name="4">
                     <router-link to="/">
-                        <Icon type="dashboard"></Icon>
+                        <Icon type="log-in"></Icon>
                         login
                     </router-link>
                 </Menu-item>
-                <Menu-item name="5">
-                    <router-link to="/Button">
-                        <Icon type="ionic"></Icon>
-                        Button 按钮
+                <Menu-item name="Editor">
+                    <router-link to="/main/editor">
+                        <Icon type="edit"></Icon>
+                        editor 编辑器
+                    </router-link>
+                </Menu-item>
+                <Menu-item name="textEditor">
+                    <router-link to="/main/textEditor">
+                        <Icon type="cash"></Icon>
+                        textEditor
+                    </router-link>
+                </Menu-item>
+                <Menu-item name="echarts">
+                    <router-link to="/main/echarts">
+                        <Icon type="ios-grid-view"></Icon>
+                        echarts
                     </router-link>
                 </Menu-item>
                 <Menu-item name="6">
