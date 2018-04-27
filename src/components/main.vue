@@ -83,7 +83,38 @@
 <template>
     <div class="layout">
         <Sider ref="side1" :style="{position: 'fixed', height: '100vh', left: 0, width: isCollapsed?'0':'200px', overflow: isCollapsed ? 'visible' : 'auto'}" hide-trigger collapsible  v-model="isCollapsed">
-            <Menu v-bind:active-name="nav" theme="dark" width="auto" :open-names="['form']" :class="menuitemClasses" @on-select="chooseItem" @on-open-change="opend">
+            <Menu v-bind:active-name="nav" theme="dark" width="auto" :open-names="['table']" :class="menuitemClasses" @on-select="chooseItem" @on-open-change="opend">
+                <Submenu name="table">
+                    <template slot="title">
+                        <Icon type="document-text"></Icon>
+                        <span>table</span>
+                    </template>
+                    <MenuItem name="tableBasic">
+                        <router-link to="/main/tableBasic">
+                            table 基础
+                        </router-link>
+                    </MenuItem>
+                    <MenuItem name="sortTable">
+                        <router-link to="/main/sortTable">
+                            table 排序
+                        </router-link>
+                    </MenuItem>
+                    <MenuItem name="editTable">
+                        <router-link to="/main/editTable">
+                            table edit
+                        </router-link>
+                    </MenuItem>
+                    <MenuItem name="dragTable">
+                        <router-link to="/main/dragTable">
+                            dragTable
+                        </router-link>
+                    </MenuItem>
+                    <MenuItem name="checkedTable">
+                        <router-link to="/main/checkedTable">
+                            table 操作
+                        </router-link>
+                    </MenuItem>
+                </Submenu>
                 <Submenu name="form">
                     <template slot="title">
                         <Icon type="star"></Icon>
@@ -122,37 +153,6 @@
                     <MenuItem name="FormSubmit">
                         <router-link to="/main/FormSubmit">
                             FormSubmit
-                        </router-link>
-                    </MenuItem>
-                </Submenu>
-                <Submenu name="table">
-                    <template slot="title">
-                        <Icon type="document-text"></Icon>
-                        <span>table</span>
-                    </template>
-                    <MenuItem name="tableBasic">
-                        <router-link to="/main/tableBasic">
-                            table 基础
-                        </router-link>
-                    </MenuItem>
-                    <MenuItem name="sortTable">
-                        <router-link to="/main/sortTable">
-                            table 排序
-                        </router-link>
-                    </MenuItem>
-                    <MenuItem name="editTable">
-                        <router-link to="/main/editTable">
-                            table edit
-                        </router-link>
-                    </MenuItem>
-                    <MenuItem name="dragTable">
-                        <router-link to="/main/dragTable">
-                            dragTable
-                        </router-link>
-                    </MenuItem>
-                    <MenuItem name="checkedTable">
-                        <router-link to="/main/checkedTable">
-                            table 操作
                         </router-link>
                     </MenuItem>
                 </Submenu>
@@ -213,7 +213,7 @@
         data (){
             return{
                 isCollapsed:false,
-                nav:"Input"
+                nav:"tableBasic"
             }
         },
         computed: {

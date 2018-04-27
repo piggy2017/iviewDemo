@@ -9,8 +9,8 @@
         <Button @click="handleSelectAll(true)">全 选</Button>
         <Button @click="handleSelectAll(false)">反 选</Button>
 
-        <Input placeholder="Please enter ..." v-model="keyword" style="width: 200px"></Input>
-        <Button type="ghost" @click="search"><Icon type="search"></Icon></Button>
+        <!--<Input placeholder="Please enter ..." v-model="keyword" style="width: 200px"></Input>-->
+        <!--<Button type="ghost" @click="search"><Icon type="search"></Icon></Button>-->
         <p style="margin: 15px 0"></p>
         <Table border ref="selection" @on-selection-change="changeTable" @on-select="selectTable" :columns="columns4" :data="data1"></Table>
         <Modal v-model="modalEdit"

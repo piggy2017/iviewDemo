@@ -25,9 +25,11 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {path: '/', name: 'Login', component: Login},
-    {path:'/main', name:'main', component:main,redirect: { name: 'Input' },
+    {path:'/main', name:'main', component:main,redirect: { name: 'tableBasic' },
         children:[
-            {path: '/', name: 'Input', component: Input},
+            //{path: '/', name: 'Input', component: Input},
+            {path: '/', name: 'tableBasic', component: tableBasic},
+            {path: 'tableBasic', name: 'tableBasic', component: tableBasic},
             {path: 'Input', name: 'Input', component: Input},
             {path: 'Button', name: 'Button', component: Button},
             {path: 'Icon', name: 'Icon', component: Icon},
@@ -41,7 +43,6 @@ export default new Router({
             {path: 'sortTable', name: 'sortTable', component: sortTable},
             {path: 'editTable', name: 'editTable', component: editTable},
             {path: 'dragTable', name: 'dragTable', component: dragTable},
-            {path: 'tableBasic', name: 'tableBasic', component: tableBasic},
             {path: 'editor', name: 'editor', component: editor},
             {path: 'textEditor', name: 'textEditor', component: textEditor},
             {path: 'echarts', name: 'textEditor', component: echarts},
