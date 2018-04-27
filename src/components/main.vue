@@ -1,4 +1,3 @@
-
 <style scoped>
     .layout{
         border: 1px solid #d7dde4;
@@ -181,10 +180,10 @@
                         echarts
                     </router-link>
                 </Menu-item>
-                <Menu-item name="6">
-                    <router-link to="/Icon">
-                        <Icon type="loop"></Icon>
-                        Icon 图标
+                <Menu-item name="uploadImg">
+                    <router-link to="/main/uploadImg">
+                        <Icon type="upload"></Icon>
+                        uploadImg
                     </router-link>
                 </Menu-item>
             </Menu>
