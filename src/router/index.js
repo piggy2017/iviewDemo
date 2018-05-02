@@ -21,6 +21,8 @@ const dragTable = r => require.ensure([], () => r(require('@/components/table/dr
 const textEditor = r => require.ensure([], () => r(require('@/components/edit/textEditor')), 'textEditor')
 const echarts = r => require.ensure([], () => r(require('@/components/charts/echarts')), 'echarts')
 const uploadImg = r => require.ensure([], () => r(require('@/components/upload/uploadImg')), 'uploadImg')
+const dataList = r => require.ensure([], () => r(require('@/components/params/dataList')), 'dataList')
+const goodsDetail = r => require.ensure([], () => r(require('@/components/params/goodsDetail')), 'goodsDetail')
 Vue.use(Router)
 export default new Router({
   routes: [
@@ -46,7 +48,9 @@ export default new Router({
             {path: 'editor', name: 'editor', component: editor},
             {path: 'textEditor', name: 'textEditor', component: textEditor},
             {path: 'echarts', name: 'textEditor', component: echarts},
-            {path: 'uploadImg', name: 'uploadImg', component: uploadImg}
+            {path: 'uploadImg', name: 'uploadImg', component: uploadImg},
+            {path: 'dataList', name: 'dataList', component: dataList},
+            {path: 'goodsDetail/:goodsId', name: 'goodsDetail', component: goodsDetail}
         ]
     },
 

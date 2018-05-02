@@ -140,6 +140,7 @@
                             DatePicker 日期
                         </router-link>
                     </MenuItem>
+
                     <MenuItem name="Cascader">
                         <router-link to="/main/Cascader">
                             Cascader
@@ -153,6 +154,17 @@
                     <MenuItem name="FormSubmit">
                         <router-link to="/main/FormSubmit">
                             FormSubmit
+                        </router-link>
+                    </MenuItem>
+                </Submenu>
+                <Submenu name="routerParams">
+                    <template slot="title">
+                        <Icon type="stats-bars"></Icon>
+                        <span>路由传参</span>
+                    </template>
+                    <MenuItem name="dataList">
+                        <router-link to="/main/dataList">
+                            dataList 列表
                         </router-link>
                     </MenuItem>
                 </Submenu>
