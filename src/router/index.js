@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 const Login = r => require.ensure([], () => r(require('@/components/login/login')), 'Login')
+const Error404 = r => require.ensure([], () => r(require('@/components/errorPage/Error404')), 'Error404')
 const main = r => require.ensure([], () => r(require('@/components/main')), 'main')
 const editor = r => require.ensure([], () => r(require('@/components/edit/editor')), 'editor')
 const Button = r => require.ensure([], () => r(require('@/components/Button')), 'Button')
@@ -53,6 +54,7 @@ export default new Router({
             {path: 'goodsDetail/:goodsId', name: 'goodsDetail', component: goodsDetail}
         ]
     },
+    {path: '/*', name: 'Error404', component: Error404}
 
   ]
 })
