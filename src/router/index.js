@@ -55,6 +55,5 @@ export default new Router({
         ]
     },
     {path: '/*', name: 'Error404', component: Error404}
-
   ]
 })
